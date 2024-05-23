@@ -1,0 +1,435 @@
+{
+	"info": {
+		"_postman_id": "5fecbd59-20d1-4ec8-a6be-43bdf03be1a3",
+		"name": "PublicTransport",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23554931"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/api/v1/station/FindAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/station/FindAll",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"station",
+						"FindAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/v1/station/FindById?stationId=3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/station/FindById?stationId=3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"station",
+						"FindById"
+					],
+					"query": [
+						{
+							"key": "stationId",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/v1/station/Save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"stationId\": 1,\r\n    \"name\": \"Kızılay\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/station/Save",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"station",
+						"Save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/v1/station/SaveAll",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"stationId\": 1,\r\n        \"name\": \"Kızılay\"\r\n    },\r\n    {\r\n        \"stationId\": 2,\r\n        \"name\": \"Milli Kütüphane\"\r\n    },\r\n    {\r\n        \"stationId\": 3,\r\n        \"name\": \"ODTÜ\"\r\n    },\r\n    {\r\n        \"stationId\": 4,\r\n        \"name\": \"AŞTİ\"\r\n    },\r\n    {\r\n        \"stationId\": 5,\r\n        \"name\": \"Maltepe\"\r\n    },\r\n    {\r\n        \"stationId\": 6,\r\n        \"name\": \"Demirtepe\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/station/SaveAll",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"station",
+						"SaveAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/v1/station/Delete?stationId=3",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/station/Delete?stationId=3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"station",
+						"Delete"
+					],
+					"query": [
+						{
+							"key": "stationId",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/v1/vehicle/FindAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/vehicle/FindAll",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"vehicle",
+						"FindAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/v1/vehicle/Delete?vehicleId=3",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/vehicle/Delete?vehicleId=3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"vehicle",
+						"Delete"
+					],
+					"query": [
+						{
+							"key": "vehicleId",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/v1/route/Save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"routeId\": 1,\r\n    \"stations\": [\r\n        {\r\n            \"stationId\": 1,\r\n            \"name\": \"Kızılay\"\r\n        },\r\n        {\r\n            \"stationId\": 2,\r\n            \"name\": \"Milli Kütüphane\"\r\n        },\r\n        {\r\n            \"stationId\": 3,\r\n            \"name\": \"ODTÜ\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/route/Save",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"route",
+						"Save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/v1/route/FindAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/route/FindAll",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"route",
+						"FindAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/v1/route/SaveAll",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"routeId\": 1,\r\n        \"stations\": [\r\n            {\r\n                \"stationId\": 1,\r\n                \"name\": \"Kızılay\"\r\n            },\r\n            {\r\n                \"stationId\": 2,\r\n                \"name\": \"Milli Kütüphane\"\r\n            },\r\n            {\r\n                \"stationId\": 3,\r\n                \"name\": \"ODTÜ\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"routeId\": 2,\r\n        \"stations\": [\r\n            {\r\n                \"stationId\": 4,\r\n                \"name\": \"AŞTİ\"\r\n            },\r\n            {\r\n                \"stationId\": 5,\r\n                \"name\": \"Maltepe\"\r\n            },\r\n            {\r\n                \"stationId\": 6,\r\n                \"name\": \"Demirtepe\"\r\n            }\r\n        ]\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/route/SaveAll",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"route",
+						"SaveAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/v1/route/Delete?routeId=5",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/route/Delete?routeId=5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"route",
+						"Delete"
+					],
+					"query": [
+						{
+							"key": "routeId",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/v1/route/FindById?routeId=1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/route/FindById?routeId=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"route",
+						"FindById"
+					],
+					"query": [
+						{
+							"key": "routeId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/v1/vehicle/Save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"vehicleId\": 1,\r\n    \"plate\": \"06J001\",\r\n    \"brand\": \"Mercedes\",\r\n    \"model\": \"1995\",\r\n    \"isActive\": true,\r\n    \"route\": {\r\n        \"routeId\": 1,\r\n        \"stations\": [\r\n            {\r\n                \"stationId\": 1,\r\n                \"name\": \"Kızılay\"\r\n            },\r\n            {\r\n                \"stationId\": 2,\r\n                \"name\": \"Milli Kütüphane\"\r\n            },\r\n            {\r\n                \"stationId\": 3,\r\n                \"name\": \"ODTÜ\"\r\n            }\r\n        ]\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/vehicle/Save",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"vehicle",
+						"Save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/v1/vehicle/SaveAll",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"vehicleId\": 1,\r\n        \"plate\": \"06J001\",\r\n        \"brand\": \"Mercedes\",\r\n        \"model\": \"1995\",\r\n        \"isActive\": true,\r\n        \"route\": {\r\n            \"routeId\": 1,\r\n            \"stations\": [\r\n                {\r\n                    \"stationId\": 1,\r\n                    \"name\": \"Kızılay\"\r\n                },\r\n                {\r\n                    \"stationId\": 2,\r\n                    \"name\": \"Milli Kütüphane\"\r\n                },\r\n                {\r\n                    \"stationId\": 3,\r\n                    \"name\": \"ODTÜ\"\r\n                }\r\n            ]\r\n        }\r\n    },\r\n    {\r\n        \"vehicleId\": 2,\r\n        \"plate\": \"06J002\",\r\n        \"brand\": \"Mercedes\",\r\n        \"model\": \"1993\",\r\n        \"isActive\": true,\r\n        \"route\": {\r\n            \"routeId\": 2,\r\n            \"stations\": [\r\n                {\r\n                    \"stationId\": 4,\r\n                    \"name\": \"AŞTİ\"\r\n                },\r\n                {\r\n                    \"stationId\": 5,\r\n                    \"name\": \"Maltepe\"\r\n                },\r\n                {\r\n                    \"stationId\": 6,\r\n                    \"name\": \"Demirtepe\"\r\n                }\r\n            ]\r\n        }\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/vehicle/SaveAll",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"vehicle",
+						"SaveAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/v1/vehicle/FindById?vehicleId=1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/vehicle/FindById?vehicleId=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"vehicle",
+						"FindById"
+					],
+					"query": [
+						{
+							"key": "vehicleId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/v1/report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/report",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"report"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
